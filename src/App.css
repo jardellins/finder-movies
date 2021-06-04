@@ -9,9 +9,13 @@ html {
     font-size: 62.5%;
 }
 
+main {
+    width: min(90vw, 1200px);
+    margin: auto;
+}
+
 body {
     background: #141414;
     color: #fff;
-    width: 100vw;
     height: 100vh;
 }

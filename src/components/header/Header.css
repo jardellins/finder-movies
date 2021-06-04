@@ -2,8 +2,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
-    padding: 3rem;
+    
+    margin-bottom: 3rem;
+    padding: 1rem;
+
+    background: #f37c27;
 }
 
 header img {

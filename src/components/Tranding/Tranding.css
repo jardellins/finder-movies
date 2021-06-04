@@ -1,0 +1,26 @@
+.rowlist {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.postMovie {
+    width: 15vw;
+    transform: scale(.8);
+}
+
+.postMovie:hover {
+    transition: all ease 2ms;
+    transform: scale(.9);
+    z-index: 10;
+}
+
+.movieImage {
+    width: 20vw;
+}
+
+.movieImage img{
+    width: 100%;
+    border-radius: 3rem;
+
+}
+
