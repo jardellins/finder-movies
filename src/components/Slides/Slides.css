@@ -1,0 +1,32 @@
+.backgound {
+    width: 100%;
+
+    background: linear-gradient(to top, #141414 2%, transparent 20%)
+}
+
+.backgroundRight {
+    background: linear-gradient(to right, #141414 20%, transparent 30%);
+}
+.backgroundLeft {
+    background: linear-gradient(to left, #141414, transparent 6%);
+    display: flex;
+    align-items: center;
+}
+
+.backgroundLeft span {
+    font-size: 8rem;
+    display: flex;
+    position: absolute;
+    font-weight: 700;
+    width: 30%;
+}
+
+.slideInfo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slideInfo img {
+    width: 80%;
+    z-index: -10;
+}
