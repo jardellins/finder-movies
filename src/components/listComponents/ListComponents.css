@@ -1,0 +1,45 @@
+.rowArea {
+    display: flex;
+    overflow: hidden;
+
+    height: 55vh;
+    
+}
+
+.postMovie {
+    transform: scale(.8);
+    height: 40vh;
+} 
+
+.postMovie:hover {
+    transition: ease 3ms;
+    transform: scale(.9);
+    z-index: 10;
+}
+
+.movieImage {
+    height: 100%;
+}
+
+.movieImage img{
+    border: solid #ff6a00;
+    border-radius: 2rem;
+
+    height: inherit;
+} 
+
+.movieImage > span, p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin-top: .5rem;
+    font-size: 2rem;
+    font-weight: 500;
+
+    color: floralwhite;
+}
+
+.movieImage p {
+    margin-top: 1rem;
+}

@@ -7,7 +7,6 @@ import './Slides.css'
 const Slide = () => {
     const [slide, setSlide] = useState([])
 
-
     useEffect(() => {
 
         const response = async () => {
@@ -21,7 +20,6 @@ const Slide = () => {
         response()
 
     }, [])
-
 
     return (
         <>

@@ -1,0 +1,38 @@
+.titleList {
+    display: flex;
+    justify-content: center;
+
+    font-size: 5rem;
+    
+    margin-top: 2rem;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+
+    padding: 2rem;
+}
+
+.search input {
+    border: none;
+    
+    padding: 2rem;
+    width: 15vw;
+    border-radius: .5rem 0 0 .5rem;
+
+    background-color: #424141;
+}
+
+.search button {
+    width: 5.5vw;
+    border-radius: .5rem;
+    margin-left: -0.5rem;
+
+    border: none;
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: rgb(97, 97, 97);
+    background: #2cff72;
+}
