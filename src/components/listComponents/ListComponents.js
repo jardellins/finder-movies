@@ -1,5 +1,7 @@
 import React from 'react'
 
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 import './ListComponents.css'
 
@@ -8,12 +10,20 @@ const Tranding = ({ listAll, onMouseOver = () => { }, onMouseOut = () => { }, mo
 
     return (
         <div className='rowArea'>
+            
+            {/* <div className='arrowLeft'>
+                <NavigateBeforeIcon />
+            </div>
+            <div className='arrowRight'>
+                <NavigateNextIcon />
+            </div> */}
+
             { listAll.map((list, index) => {
 
-                if(list.release_date){
+                if (list.release_date) {
                     let dateArray = list.release_date.split("-")
                     yearRelease = dateArray[0]
-                }else{
+                } else {
                     let dateArray = list.first_air_date.split("-")
                     yearRelease = dateArray[0]
                 }

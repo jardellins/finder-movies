@@ -58,7 +58,7 @@ const Main = () => {
             <main>
                 <Slides />
                 <div className='search'>
-                    <input id='search' type='text' />
+                    <input className={() => {}} id='search' type='text' placeholder="Encontre o seu filme/série..." />
                     <button>Procurar</button>
                 </div>
                 {listAll ?
