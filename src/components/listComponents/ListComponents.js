@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -6,41 +6,58 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import './ListComponents.css'
 
 const Tranding = ({ listAll, onMouseOver = () => { }, onMouseOut = () => { }, mouseOver }) => {
-    let yearRelease = 0
+    const [scrollX, setScrollX] = useState(0)
+    
+    function handleLeftArrow() {
+        let x = scrollX + Math.round(window.innerWidth / 3)
+
+        if( x > 0) {
+            x = 0
+        }
+        
+        setScrollX(x)
+    }
+    
+    function handleRightArrow() {
+        let x = scrollX - Math.round(window.innerWidth / 3);
+        let listW = listAll.length * 200;
+        console.log(x)
+        if(window.innerWidth - listW > x)
+        {
+            x = (window.innerWidth - listW) - 20;
+        }
+
+        setScrollX(x);
+    }
 
     return (
-        <div className='rowArea'>
-            
-            {/* <div className='arrowLeft'>
-                <NavigateBeforeIcon />
+        <div className='listRow' >
+            <div className='arrowLeft' >
+                <NavigateBeforeIcon onClick={handleLeftArrow} />
             </div>
-            <div className='arrowRight'>
-                <NavigateNextIcon />
-            </div> */}
 
-            { listAll.map((list, index) => {
+            <div className='rowArea' style={{marginLeft: scrollX}}>
+                {listAll.map((list, index) => {
 
-                if (list.release_date) {
-                    let dateArray = list.release_date.split("-")
-                    yearRelease = dateArray[0]
-                } else {
-                    let dateArray = list.first_air_date.split("-")
-                    yearRelease = dateArray[0]
-                }
+                    return (
+                        <div key={index} className='postMovie'>
+                            <div className='movieImage'>
+                                <img src={`https://image.tmdb.org/t/p/w300${list.poster_path}`} alt={list.title ? list.title : list.name} />
+                                <span>{list.title ? list.title : list.name}</span>
+                            </div>
 
-                return (
-                    <div key={index} className='postMovie'>
-                        <div className='movieImage'>
-                            <img src={`https://image.tmdb.org/t/p/w300${list.poster_path}`} alt={list.title ? list.title : list.name} />
-                            <span>{list.title ? list.title : list.name}</span>
-                            <p>{yearRelease}</p>
                         </div>
+                    )
 
-                    </div>
-                )
+                })}
+            </div>
 
-            })}
+            <div className='arrowRight'>
+                <NavigateNextIcon onClick={handleRightArrow} />
+            </div>
         </div>
+
+
     )
 }
 

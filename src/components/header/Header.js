@@ -6,7 +6,7 @@ import './Header.css'
 const Header = () => {
     return (
         <header>
-            <span>Finder Movies</span>
+            <span>Movies Search</span>
             <nav>
                 <ul>
                     <li>Home</li>

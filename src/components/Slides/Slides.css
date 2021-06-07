@@ -19,7 +19,8 @@
     position: absolute;
     font-weight: 700;
     width: 30%;
-    text-shadow: 5px 0px 4px #ff6a00;
+    text-shadow: 7px 5px 4px black;
+    color: #e2e2e2;
 }
 
 .slideInfo {

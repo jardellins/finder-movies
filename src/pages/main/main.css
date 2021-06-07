@@ -28,9 +28,11 @@ input {
 }
 
 .search button {
-    width: 5.5vw;
+    width: 6.5vw;
     border-radius: .5rem;
     margin-left: -0.5rem;
+
+    padding: 2rem;
 
     border: none;
     font-size: 2rem;
@@ -48,4 +50,15 @@ input {
 
 .filled {
     border: solid .2rem #2cff72;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;    
+}
+
+.loading img {
+    width: 4vw;
 }

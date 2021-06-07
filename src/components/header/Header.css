@@ -1,6 +1,6 @@
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
     height: 10vh;
@@ -13,4 +13,33 @@ header {
 header img {
     width: inherit;
     height: inherit;
+}
+
+header span {
+    font-size: 3rem;
+    font-weight: 700;
+    
+    color: #fff;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    width: 16vw;
+}
+
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    
+    width: 7rem;
+    height: 8rem;
+}
+
+header li:hover {
+    border-bottom: solid;
+    cursor: pointer;
 }

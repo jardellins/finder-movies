@@ -1,20 +1,25 @@
 .rowArea {
     display: flex;
-    overflow: hidden;
+    overflow: scroll;
 
-    height: 55vh;
+    height: 48vh;
     
+}
+
+.rowArea::-webkit-scrollbar {
+    display: none;
 }
 
 .postMovie {
     transform: scale(.8);
-    height: 35vh;
+    height: 33vh;
 } 
 
 .postMovie:hover {
     transition: ease 3ms;
     transform: scale(.9);
     z-index: 10;
+    cursor: pointer;
 }
 
 .movieImage {
@@ -43,43 +48,56 @@
 .movieImage p {
     margin-top: 1rem;
 }
-/* 
+
+.listRow {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    transition: all ease 3ms;
+}
+ 
 .arrowRight,
 .arrowLeft {
     display: flex;
     align-items: center;
-    position: absolute;
     width: 3vw;
     height: 35vh;    
-    z-index: 10;
-}
-
-.arrowRight,
-.arrowLeft:hover {
-    z-index: 10;
 }
 
 .arrowLeft {
-    display: grid;
-    justify-content: flex-end;
-    width: 3.5vw;
+    margin-right: -4rem;
+    justify-content: center;
+    background: linear-gradient(to right, #141414 15%, transparent 100%);
+    border-radius: .25rem 4rem 4rem .25rem;
+    cursor: pointer;
+    z-index: 11;
 }
 
 .arrowRight {
-    display: flex;
-    justify-content: flex-end;
-    width: 65.5vw;
+    margin-left: -4.5rem;
+    justify-content: center;
+    background: linear-gradient(to left, #141414 15%, transparent 100%);
+    border-radius: 4rem .25rem .25rem 4rem;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .arrowLeft svg {
     font-size: 10rem;
     background: linear-gradient(to left, #678 2%, transparent 82%);
     border-radius: 0 5rem 5rem 0;
+    z-index: 20;
+    opacity: 0;
 }
 
 .arrowRight svg {
     font-size: 10rem;
     background: linear-gradient(to right, #678 2%, transparent 82%);
     border-radius: 5rem 0 0 5rem;
-} */
+    z-index: 10;
+    opacity: 0;
+} 
 
+.listRow:hover svg{
+    opacity: 1;
+}
