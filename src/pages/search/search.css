@@ -18,10 +18,11 @@ main p {
 .listFind {
     display: inherit;
     height: 50vh;
-    width: 24vw;
+    width: 15vw;
     justify-content: center;
     text-align: center;
     padding: 4rem;
+    margin-bottom: 3rem;
 }
 
 .infoList {
@@ -31,15 +32,14 @@ main p {
 }
 
 .infoList img {
-    height: 100%;
-    object-fit: cover;
+    height: 35rem;
+    margin: 1rem 0;
     border: solid;
 }
 
 .infoList span {
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 2rem;
+    height: 5vh;
+    margin: 2rem 0;
 }
 
 .loading {

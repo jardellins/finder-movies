@@ -8,6 +8,7 @@ import Key from '../../key.js'
 import Header from '../../components/header/Header'
 import loading from '../../assets/loading.gif'
 import './search.css'
+import Loading from '../../components/loading/Loading'
 
 const Search = () => {
     const query = useQuery()
@@ -30,7 +31,7 @@ const Search = () => {
     useEffect(() => {
 
         const findout = async () => {
-            await api.get(`/search/movie${Key}&query=${query.get("name")}`).then(response => {
+            await api.get(`/search/multi${Key}&query=${query.get("name")}`).then(response => {
                 setSearchList(response.data.results)
             })
         }
@@ -38,7 +39,7 @@ const Search = () => {
         findout()
     }, [])
 
-    // console.log(getDate)
+    console.log(searchList)
 
     return (
         <>
@@ -49,17 +50,22 @@ const Search = () => {
                         <p>Pesquisa por "{name}"</p>
                         <div className='listSearch'>
                             {searchList.map((list, index) => {
-                                let date = list.release_date
-                                let newDate = date.split('-')
+                                console.log(list);
+                                let date = (list.release_date ? list.release_date : list.first_air_date)
+                                let newDate = []
+
+                                if(date){
+                                    newDate = date.split('-')
+                                }
 
                                 return (
                                     <div key={index} className='listFind'>
                                         <div className='infoList'>
                                             <span>
-                                                <h1>{list.title}</h1>
+                                                <h1>{ list.title ? list.title : list.name }</h1>
                                                 {newDate[0]}
                                             </span>
-                                            <img src={`https://image.tmdb.org/t/p/w300${list.poster_path}`} />
+                                            <img src={`https://image.tmdb.org/t/p/w300${list.poster_path}`} alt={ list.title ? list.title : list.name } />
                                         </div>
                                     </div>
                                 )
@@ -69,10 +75,7 @@ const Search = () => {
                     </main>
                 </>
                 :
-                <div className='loading'>
-                    <img src={loading} alt='Não encontrado' />
-                </div>
-
+                <Loading />
             }
         </>
     )

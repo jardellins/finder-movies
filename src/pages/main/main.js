@@ -9,6 +9,7 @@ import ListComponents from '../../components/listComponents/ListComponents'
 
 import loading from '../../assets/loading.gif'
 import './main.css'
+import Loading from '../../components/loading/Loading'
 
 const Main = () => {
     const [listAll, setListAll] = useState(null)
@@ -37,6 +38,7 @@ const Main = () => {
 
             setListDiscover({
                 items,
+                media_type: 'movie',
                 title: "Novidades"
             })
         })
@@ -49,6 +51,7 @@ const Main = () => {
 
             setListTvTranding({
                 items,
+                media_type: 'tv',
                 title: "Séries em Destaques"
             })
         })
@@ -87,7 +90,7 @@ const Main = () => {
                         {listAll ?
                             <>
                                 <span className='titleList'>{listAll.title}</span>
-                                <ListComponents listAll={listAll.items} onMouseOver={() => setMouseOver(prevState => !prevState)} onMouseOut={() => setMouseOver(prevState => !prevState)} mouseOver={mouseOver} />
+                                <ListComponents listAll={listAll.items} onMouseOver={() => setMouseOver(prevState => !prevState)} onMouseOut={() => setMouseOver(prevState => !prevState)} mouseOver={mouseOver}  />
                             </>
                             : null
                         }
@@ -95,23 +98,21 @@ const Main = () => {
                         {listDiscover ?
                             <>
                                 <span className='titleList'>{listDiscover.title}</span>
-                                <ListComponents listAll={listDiscover.items} onMouseOver={() => setMouseOver(prevState => !prevState)} onMouseOut={() => setMouseOver(prevState => !prevState)} mouseOver={mouseOver} />
+                                <ListComponents listAll={listDiscover.items} onMouseOver={() => setMouseOver(prevState => !prevState)} onMouseOut={() => setMouseOver(prevState => !prevState)} mouseOver={mouseOver} media_type={listDiscover.media_type} />
                             </>
                             : null
                         }
                         {listTvTranding ?
                             <>
                                 <span className='titleList'>{listTvTranding.title}</span>
-                                <ListComponents listAll={listTvTranding.items} onMouseOver={() => setMouseOver(prevState => !prevState)} onMouseOut={() => setMouseOver(prevState => !prevState)} mouseOver={mouseOver} />
+                                <ListComponents listAll={listTvTranding.items} onMouseOver={() => setMouseOver(prevState => !prevState)} onMouseOut={() => setMouseOver(prevState => !prevState)} mouseOver={mouseOver} media_type={listTvTranding.media_type} />
                             </>
                             : null
                         }
                     </main>
                 </>
                 :
-                <div className="loading">
-                    <img src={loading} alt="Carreando.." />
-                </div>
+                <Loading />
             }
 
         </>

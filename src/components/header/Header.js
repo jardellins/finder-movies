@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import icon from '../../assets/icon-movie.svg'
 
 import './Header.css'
@@ -6,15 +7,20 @@ import './Header.css'
 const Header = () => {
     return (
         <header>
-            <span>Movies Search</span>
+            <div className="logo">
+                <img src={icon} alt="logo cabeçalho" />
+                <span>Movies Search</span>
+            </div>
             <nav>
                 <ul>
-                    <li>Home</li>
+                    <li>
+                        <Link to='/' >Home</Link>
+                    </li>
                     <li>Genero</li>
-                    <li>Ano</li>
+                    <li>Filmes</li>
+                    <li>Séries</li>
                 </ul>
             </nav>
-            <img src={icon} alt="logo cabeçalho" />
         </header>
     )
 }

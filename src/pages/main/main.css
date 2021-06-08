@@ -51,14 +51,3 @@ input {
 .filled {
     border: solid .2rem #2cff72;
 }
-
-.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;    
-}
-
-.loading img {
-    width: 4vw;
-}
