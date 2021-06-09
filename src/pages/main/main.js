@@ -10,6 +10,7 @@ import ListComponents from '../../components/listComponents/ListComponents'
 import loading from '../../assets/loading.gif'
 import './main.css'
 import Loading from '../../components/loading/Loading'
+import Footer from '../../components/footer/footer'
 
 const Main = () => {
     const [listAll, setListAll] = useState(null)
@@ -114,7 +115,7 @@ const Main = () => {
                 :
                 <Loading />
             }
-
+        <Footer />
         </>
     )
 }

@@ -9,6 +9,7 @@ import Header from '../../components/header/Header'
 import loading from '../../assets/loading.gif'
 import './search.css'
 import Loading from '../../components/loading/Loading'
+import Footer from '../../components/footer/footer'
 
 const Search = () => {
     const query = useQuery()
@@ -54,7 +55,7 @@ const Search = () => {
                                 let date = (list.release_date ? list.release_date : list.first_air_date)
                                 let newDate = []
 
-                                if(date){
+                                if (date) {
                                     newDate = date.split('-')
                                 }
 
@@ -62,11 +63,11 @@ const Search = () => {
                                     <div key={index} className='listFind'>
                                         <div className='infoList'>
                                             <span>
-                                                <h1>{ list.title ? list.title : list.name }</h1>
+                                                <p className='titleListSearch'>{list.title ? list.title : list.name}</p>
                                                 {newDate[0]}
                                             </span>
-                                            <img src={`https://image.tmdb.org/t/p/w300${list.poster_path}`} alt={ list.title ? list.title : list.name } />
                                         </div>
+                                        <img className='image' src={`https://image.tmdb.org/t/p/w300${list.poster_path}`} alt={list.title ? list.title : list.name} />
                                     </div>
                                 )
                             })}
@@ -77,6 +78,7 @@ const Search = () => {
                 :
                 <Loading />
             }
+            <Footer />
         </>
     )
 }

@@ -26,14 +26,14 @@
     height: 100%;
 }
 
-.movieImage img{
+.movieImage > img{
     border: solid #ff6a00;
     border-radius: 2rem;
 
     height: inherit;
 } 
 
-.movieImage > span, p {
+.movieImage > span {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -43,10 +43,6 @@
     font-weight: 500;
 
     color: floralwhite;
-}
-
-.movieImage p {
-    margin-top: 1rem;
 }
 
 .listRow {
@@ -82,7 +78,7 @@
     z-index: 10;
 }
 
-.arrowLeft svg {
+.arrowLeft > svg {
     font-size: 10rem;
     background: linear-gradient(to left, #678 2%, transparent 82%);
     border-radius: 0 5rem 5rem 0;
@@ -90,7 +86,7 @@
     opacity: 0;
 }
 
-.arrowRight svg {
+.arrowRight > svg {
     font-size: 10rem;
     background: linear-gradient(to right, #678 2%, transparent 82%);
     border-radius: 5rem 0 0 5rem;

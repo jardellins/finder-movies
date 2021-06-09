@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.backgroundLeft span {
+.backgroundLeft > span {
     font-size: 8rem;
     display: flex;
     position: absolute;
@@ -28,7 +28,7 @@
     justify-content: flex-end;
 }
 
-.slideInfo img {
+.slideInfo > img {
     width: 80%;
     z-index: -10;
 }
