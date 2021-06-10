@@ -8,6 +8,7 @@ header {
     padding: 1rem;
 
     background: #ff8732;
+
 }
 
 .logo {
@@ -15,11 +16,11 @@ header {
     align-items: center;
 }
 
-.logo img {
+.logo > img {
     width: 4vw;
 }
 
-header span {
+header  span {
     font-size: 3rem;
     font-weight: 700;
     
@@ -43,9 +44,57 @@ header li {
     height: 8rem;
 
     margin: 0 1rem;
+
 }
 
 header li:hover {
     border-bottom: solid;
     cursor: pointer;
+}
+
+.dropButton{
+    display: block;
+    margin-top: -2rem;
+    
+    padding: 1rem;
+    width: 9vw;
+    
+    position: relative;
+    
+    color: white;
+
+    background: none;
+    border: none;
+    
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+}
+
+.dropdownContent {
+    display: none;
+
+    text-align: center;
+    
+    background: #ff8732;
+    
+    border-top: solid 1px;
+    border-radius: .25rem;
+    
+    padding: .5rem;
+    z-index: 10;
+}
+
+.dropdownContent:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
 }

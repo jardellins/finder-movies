@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react' 
 import { useLocation } from 'react-router'
 
 import api from '../../services/api'
 import Key from '../../key.js'
 
+import './genre.css'
 import Header from '../../components/header/Header'
 import ListSearchs from '../../components/lisrSearchs/listSearchs'
 import Footer from '../../components/footer/footer'
 
-import './search.css'
-
-const Search = () => {
+const Genre = () => {
     const query = useQuery()
-    const name = query.get("name")
+    const genre = query.get("genre")
 
     const [searchList, setSearchList] = useState({})
 
@@ -20,25 +19,24 @@ const Search = () => {
         return new URLSearchParams(useLocation().search);
     }
 
-
     useEffect(() => {
 
         const findout = async () => {
-            await api.get(`/search/multi${Key}&query=${query.get("name")}`).then(response => {
+            await api.get(`/discover/movie${Key}&with_genres=${query.get("id")}`).then(response => {
                 setSearchList(response.data.results)
             })
         }
 
         findout()
-    }, [])
+    }, [genre])
 
     return (
         <>
             <Header />
-            <ListSearchs searchList={searchList} name={name} />
+            <ListSearchs searchList={searchList} genre={genre} />
             <Footer />
         </>
     )
 }
 
-export default Search;
+export default Genre
