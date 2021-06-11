@@ -13,7 +13,8 @@ const Infor = () => {
     const { params } = useRouteMatch()
 
     const [getInfo, setGetInfo] = useState({})
-
+    const [loaded, setLoaded] = useState(false);
+    
     useEffect(() => {
         const handleGetApi = async () => {
 
@@ -33,15 +34,18 @@ const Infor = () => {
             <main className='mainInfo'>
                 {getInfo.id ?
                     <>
-                        <img src={`https://image.tmdb.org/t/p/original${getInfo.backdrop_path}`} alt={getInfo.title} />
+                        <div className='imageBack' />
+                        <img src={`https://image.tmdb.org/t/p/original${getInfo.backdrop_path}`} alt={getInfo.title} onLoad={() => setLoaded(true)} />
                         <div className='container'>
-                            <div className='mediaPoster'>
-                                <img src={`https://image.tmdb.org/t/p/w300${getInfo.poster_path}`} alt={getInfo.title} />
-                                <div className='overviwe'>
-                                    <h1>{getInfo.title}</h1>
-                                    <p>{getInfo.overview}</p>
+                            {loaded === false ? null :
+                                <div className='mediaPoster'>
+                                    <img src={`https://image.tmdb.org/t/p/w300${getInfo.poster_path}`} alt={getInfo.title} />
+                                    <div className='overviwe'>
+                                        <h1>{getInfo.title}</h1>
+                                        <p>{getInfo.overview}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            }
                             <div className='details'>
                                 <span>{getInfo.release_date}</span>
                                 <span>país de Origem: {getInfo.origin_country}</span>

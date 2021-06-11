@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import icon from '../../assets/icon-movie.svg'
 
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+
 import api from '../../services/api'
 import Key from '../../key.js'
 
@@ -36,7 +38,7 @@ const Header = () => {
                     </li>
                     <li>
                         <div className='dropdown'>
-                            <button className='dropButton'>Gênero</button>
+                            <button className='dropButton'>Gênero <ArrowDropDownIcon /></button>
                             {genreList[0] && genreList.map(list => {
                                 return (
                                         <div key={list.id} className='dropdownContent'>

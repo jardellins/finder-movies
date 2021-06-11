@@ -30,7 +30,6 @@ header  span {
 header ul {
     display: flex;
     justify-content: space-around;
-    width: 16vw;
 }
 
 header li {
@@ -40,10 +39,9 @@ header li {
 
     font-size: 2rem;
     
-    width: 7rem;
-    height: 8rem;
+    width: 10rem;
 
-    margin: 0 1rem;
+    margin: 0 2rem;
 
 }
 
@@ -53,13 +51,10 @@ header li:hover {
 }
 
 .dropButton{
-    display: block;
+    /* display: block; */
     margin-top: -2rem;
     
     padding: 1rem;
-    width: 9vw;
-    
-    position: relative;
     
     color: white;
 
@@ -67,7 +62,12 @@ header li:hover {
     border: none;
     
     font-size: 2rem;
-    font-weight: 500;
+    height: 5rem;
+}
+
+.dropButton > svg {
+    font-size: 5rem;
+    margin-top: -1rem;
 }
 
 .dropdown {
@@ -83,7 +83,7 @@ header li:hover {
     
     background: #ff8732;
     
-    border-top: solid 1px;
+    border-bottom: solid 1px;
     border-radius: .25rem;
     
     padding: .5rem;
@@ -93,6 +93,8 @@ header li:hover {
 .dropdownContent:hover {
     transform: scale(1.1);
     cursor: pointer;
+    z-index: 15;
+    border: solid 1px;
 }
 
 .dropdown:hover .dropdownContent {
