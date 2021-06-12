@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
 import api from '../../services/api'
 import Key from '../../key.js'
 
@@ -7,7 +8,6 @@ import Header from '../../components/header/Header'
 import Slides from '../../components/Slides/Slides'
 import ListComponents from '../../components/listComponents/ListComponents'
 
-import loading from '../../assets/loading.gif'
 import './main.css'
 import Loading from '../../components/loading/Loading'
 import Footer from '../../components/footer/footer'
@@ -78,9 +78,10 @@ const Main = () => {
             { slide.id ?
                 <>
                     <Header />
-
+                    
                     <main>
                         <Slides slide={slide} />
+                        
                         <div className='search'>
                                 <input id='search' value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Digite o nome do filme ou série" />
                             <Link to={`/search?name=${search}`} >

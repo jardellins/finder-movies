@@ -21,7 +21,7 @@ const ListSearchs = ({searchList, name, genre}) => {
                             if (date) {
                                 newDate = date.split('-')
                             }
-
+                            
                             return (
                                 <Link key={index} to={`/info/${list.id}/${list.media_type}`}>
 

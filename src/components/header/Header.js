@@ -41,17 +41,19 @@ const Header = () => {
                             <button className='dropButton'>Gênero <ArrowDropDownIcon /></button>
                             {genreList[0] && genreList.map(list => {
                                 return (
-                                        <div key={list.id} className='dropdownContent'>
-                                            <Link to={`/genres?id=${list.id}&genre=${list.name}`} >
-                                                {list.name}
-                                            </Link>
-                                        </div>
+                                    <div key={list.id} className='dropdownContent'>
+                                        <Link to={`/genres?id=${list.id}&genre=${list.name}`} >
+                                            {list.name}
+                                        </Link>
+                                    </div>
                                 )
                             })}
                         </div>
                     </li>
-                        <li>Filmes</li>
-                        <li>Séries</li>
+                    <li>
+                        <Link to='/movie'>Filmes</Link>
+                    </li>
+                    <li>Séries</li>
                 </ul>
             </nav>
         </header>

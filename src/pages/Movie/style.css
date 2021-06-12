@@ -1,0 +1,64 @@
+.mainInfo {
+    width: min(90vw, 1200px);
+    margin: auto;
+}
+
+.container {
+    margin-top: 10%;
+    padding: 3rem;
+    
+    background: #eaeaea;
+}
+
+.mediaPoster {
+    display: flex;
+}
+
+.mediaPoster > img {
+    height: 51vh;
+}
+
+.mainInfo > img {
+    width: 100%;
+    border: solid #2b2b2b;
+    border-top: none;
+}
+
+.overviwe {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 2rem;
+}
+
+.overviwe > h1 {
+    font-size: 6rem;
+    color: #0c1a60;
+    margin-bottom: 2rem;
+}
+
+.overviwe p {
+    font-size: 3rem;
+    text-align: justify;
+    line-height: 3.5rem;
+    color: #565656;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2rem;
+    
+    font-size: 1.9rem;
+    
+    color: #565656;
+}
+
+.details span {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}

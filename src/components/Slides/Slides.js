@@ -2,8 +2,8 @@ import React from 'react'
 
 import './Slides.css'
 
-const Slide = (slide) => {
-
+const Slide = (slide, onLoad = () => {} ) => {
+console.log('image')
     return (
         <>
             <div className='backgound'>
@@ -11,7 +11,7 @@ const Slide = (slide) => {
                     <div className='backgroundLeft'>
                         <span >{slide.slide.title}</span>
                         <div className='slideInfo'>
-                            <img src={`https://image.tmdb.org/t/p/original${slide.slide.backdrop_path}`} alt={slide.title} />
+                            <img src={`https://image.tmdb.org/t/p/original${slide.slide.backdrop_path}`} alt={slide.title} onLoad={onLoad} />
                         </div>
                     </div>
                 </div>
