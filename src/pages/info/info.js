@@ -9,15 +9,18 @@ import Loading from '../../components/loading/Loading'
 
 import './info.css'
 import Footer from '../../components/footer/footer'
+import Modal from '../../components/Modal/Modal'
 
 const Infor = () => {
     const { params } = useRouteMatch()
 
     const [getInfo, setGetInfo] = useState({})
     const [getTrailer, setGetTrailer] = useState([])
+    const [urlTrailer, setURLTrailer] = useState('')
     const [loaded, setLoaded] = useState(false);
-
+    const [showModal, setShowModal] = useState(false);
     const [minutes, setMinutes] = useState(0)
+    const [dateNew, setDateNew] = useState('')
 
     useEffect(() => {
         const handleGetApi = async () => {
@@ -42,10 +45,15 @@ const Infor = () => {
 
     }, [getInfo])
 
+    useEffect(() => {
+        if (getTrailer.length) {
+            setURLTrailer(getTrailer[0].key)
+        }
+    }, [getTrailer])
+
     const handleMinute = () => {
         if (!getInfo.runtime === false) {
             setMinutes(getInfo.runtime)
-            console.log('passou')
         } else {
             if (!getInfo.episode_run_time === false) {
                 setMinutes(getInfo.episode_run_time[0])
@@ -53,12 +61,28 @@ const Infor = () => {
         }
     }
 
+
+    const handleDate = () => {
+        if (getInfo.release_date) {
+            const dateArray = getInfo.release_date.split('-')
+
+            setDateNew(`${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`)
+        } else {
+            if (getInfo.first_air_date) {
+                const dateArray = getInfo.first_air_date.split('-')
+
+                setDateNew(`${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`)
+            }
+        }
+    }
+
     useEffect(() => {
         handleMinute()
+        handleDate()
     }, [getInfo])
 
     console.log(getInfo)
-    console.log(getTrailer)
+    // console.log(urlTrailer)
 
     return (
         <>
@@ -94,16 +118,18 @@ const Infor = () => {
                             }
                             <div className='containerDetails'>
                                 <div className='details'>
-                                    <span>{getInfo.release_date}</span>
+                                    {dateNew &&
+                                        <span>Estreia: {dateNew}</span>
+                                    }
 
-                                    <span>
-                                        {getInfo.origin_country === true &&
-                                            (getInfo.origin_country.length > 1 ? 'Paises de origem: ' : 'País de origem: ')
-                                                (getInfo.origin_country.map(country => (
-                                                    country + ' '))
-                                                )
-                                        }
-                                    </span>
+                                    {getInfo.origin_country &&
+                                        <span>
+                                            {getInfo.origin_country.length > 1 ? 'Paises de origem: ' : 'País de origem: '}
+                                            {getInfo.origin_country.map(country => (
+                                                country + ' '))
+                                            }
+                                        </span>
+                                    }
 
                                     <span>
                                         {getInfo.production_countries && 'Filmagens: '}
@@ -147,14 +173,7 @@ const Infor = () => {
                                 <div className='watch'>
                                     {getTrailer.length > 0 &&
                                         <>
-                                            {/* <a href={`https://www.youtube.com/embed/${getTrailer[0].key}`}>
-                                            <button id='playTrailer'>Trailer</button>
-                                        </a> */}
-                                            <iframe
-                                                src={`https://www.youtube.com/embed/${getTrailer[0].key}`}
-                                                frameborder="0"
-                                                allowfullscreen
-                                            ></iframe>
+                                            <button id='playTrailer' onClick={() => setShowModal(true)}>Trailer</button>
                                         </>
                                     }
                                     {getInfo.homepage &&
@@ -173,6 +192,11 @@ const Infor = () => {
                 }
 
             </main>
+
+            {showModal &&
+                <Modal url={`https://www.youtube.com/embed/${urlTrailer}`} onClose={() => setShowModal(false)} />
+            }
+
             <Footer />
         </>
     )

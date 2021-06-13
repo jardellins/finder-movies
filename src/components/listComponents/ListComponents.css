@@ -1,6 +1,6 @@
 .rowArea {
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
 
     height: 40vh;
     
