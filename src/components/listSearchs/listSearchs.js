@@ -1,7 +1,7 @@
 import React from 'react' 
 import { Link } from 'react-router-dom'
 
-import Loading from '../../components/loading/Loading'
+import Loading from '../loading/Loading'
 
 import './listSearchs.css'
 

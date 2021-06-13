@@ -14,46 +14,69 @@
     display: flex;
 }
 
-.mediaPoster > img {
-    height: 51vh;
-}
-
-.mainInfo > img {
-    width: 100%;
+#poster {
+    width: auto;
+    height: auto;
     border: solid #2b2b2b;
-    border-top: none;
 }
 
-.overviwe {
+#logo {
+    width: 4vw;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+.overview {
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    padding: 0 2rem;
+    padding: 0 3rem;
 }
 
-.overviwe > h1 {
+.overview > h1 {
     font-size: 6rem;
     color: #0c1a60;
     margin-bottom: 2rem;
 }
 
-.overviwe p {
+.overview > h2 {
+    font-size: 2rem;
+    color: #0c1a60;
+    margin-bottom: 2rem;
+}
+
+.overview > h3 {
+    font-size: 3rem;
+    color: #565656;
+    margin-bottom: 2rem;
+}
+
+.overview p {
     font-size: 3rem;
     text-align: justify;
     line-height: 3.5rem;
     color: #565656;
 }
 
+.containerDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .details {
     display: flex;
     flex-direction: column;
 
+    width: 50vw;
+
     margin-top: 2rem;
     
     font-size: 1.9rem;
+    overflow-wrap: anywhere;
     
     color: #565656;
 }
@@ -61,4 +84,52 @@
 .details span {
     margin-bottom: 1rem;
     font-weight: 500;
+}
+
+.watch {
+    display: flex;
+    justify-content: space-evenly;
+    
+    width: 100%;
+}
+
+#playTrailer {
+    width: 10vw;
+    height: 8vh;
+
+    border: solid #ff8732;
+    border-radius: 2rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+#playTrailer:hover {
+    transition: ease 2ms;
+    transform: scale(1.1);
+    background-color: #ffe2d1;
+}
+
+#play {
+    width: 10vw;
+    height: 8vh;
+
+    border: none;
+    border-radius: 2rem;
+
+    background: #ff8732;
+    color: #424242;
+    
+    font-size: 2rem;
+    font-weight: 700;
+    
+    cursor: pointer;
+}
+
+#play:hover {
+    transition: ease 2ms;
+    transform: scale(1.1);
+    background-color: #ff7b1d;
 }

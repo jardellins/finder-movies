@@ -1,18 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Slides.css'
 
-const Slide = (slide, onLoad = () => {} ) => {
-console.log('image')
+const Slide = (slide) => {
+
     return (
         <>
             <div className='backgound'>
                 <div className='backgroundRight'>
                     <div className='backgroundLeft'>
-                        <span >{slide.slide.title}</span>
-                        <div className='slideInfo'>
-                            <img src={`https://image.tmdb.org/t/p/original${slide.slide.backdrop_path}`} alt={slide.title} onLoad={onLoad} />
-                        </div>
+                        <Link to={`/info/${slide.slide.id}/${slide.slide.media_type}`}>
+                            <div className='containerBack'>
+                                <span >{slide.slide.title}</span>
+                                <div className='slideInfo'>
+                                    <img src={`https://image.tmdb.org/t/p/original${slide.slide.backdrop_path}`} alt={slide.title} />
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

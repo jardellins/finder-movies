@@ -51,9 +51,11 @@ const Header = () => {
                         </div>
                     </li>
                     <li>
-                        <Link to='/movie'>Filmes</Link>
+                        <Link to='/movie' >Filmes</Link>
                     </li>
-                    <li>Séries</li>
+                    <li>
+                        <Link to='/tv' >Séries</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

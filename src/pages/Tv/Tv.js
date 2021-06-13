@@ -7,24 +7,15 @@ import Footer from '../../components/footer/footer'
 import Header from '../../components/header/Header'
 import ListSearchs from '../../components/listSearchs/listSearchs'
 
-import './style.css'
+import './Style.css'
 
 const Movie = () => {
     const [listOfMovies, setListOfMovies] = useState([])
     const [newList, setNewList] = useState([])
-
-    const addMedia = () => {
-        const newData = listOfMovies.map(list => ({
-            ...list,
-            media_type: 'movie'
-        }))
-
-        setNewList(newData)
-    }
     
     useEffect(() => {
         const getMovies = async () => {
-            await api.get(`/discover/movie${Key}`).then(responde => {
+            await api.get(`/discover/tv${Key}`).then(responde => {
                 setListOfMovies(responde.data.results)
             })
         } 
@@ -37,6 +28,15 @@ const Movie = () => {
         addMedia()
 
     }, [listOfMovies])
+
+    const addMedia = () => {
+        const newData = listOfMovies.map(list => ({
+            ...list,
+            media_type: 'tv'
+        }))
+
+        setNewList(newData)
+    }
 
     return (
         <>

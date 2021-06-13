@@ -66,7 +66,7 @@ const Main = () => {
             const redonNumber = Math.floor(Math.random() * (list.data.results.length - 1))
             const choose = list.data.results[redonNumber]
 
-            setSlide(choose)
+            setSlide({...choose, media_type: 'movie'})
         }
 
         response()

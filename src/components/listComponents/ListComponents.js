@@ -1,42 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
-
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 import './ListComponents.css'
 
 const Tranding = ({ listAll, onMouseOver = () => { }, onMouseOut = () => { }, mouseOver, media_type }) => {
-    const [scrollX, setScrollX] = useState(0)
-
-    function handleLeftArrow() {
-        let x = scrollX + Math.round(window.innerWidth / 3)
-
-        if (x > 0) {
-            x = 0
-        }
-
-        setScrollX(x)
-    }
-
-    function handleRightArrow() {
-        let x = scrollX - Math.round(window.innerWidth / 3);
-        let listW = listAll.length * 200;
-        console.log(x)
-        if (window.innerWidth - listW > x) {
-            x = (window.innerWidth - listW) - 20;
-        }
-
-        setScrollX(x);
-    }
-
+    
     return (
         <div className='listRow' >
-            <div className='arrowLeft' >
-                <NavigateBeforeIcon onClick={handleLeftArrow} />
-            </div>
 
-            <div className='rowArea' style={{ marginLeft: scrollX }}>
+            <div className='backLeft'/>
+
+            <div className='rowArea' >
                 {listAll.map((list, index) => {
                     return (
                         <Link key={index} to={`/info/${list.id}/${list.media_type ? list.media_type : media_type }`}>
@@ -52,10 +26,9 @@ const Tranding = ({ listAll, onMouseOver = () => { }, onMouseOut = () => { }, mo
 
                 })}
             </div>
-
-            <div className='arrowRight'>
-                <NavigateNextIcon onClick={handleRightArrow} />
-            </div>
+            
+            <div className='backRight'/>
+            
         </div>
 
 

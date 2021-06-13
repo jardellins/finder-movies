@@ -2,13 +2,20 @@
     display: flex;
     overflow: scroll;
 
-    height: 48vh;
+    height: 40vh;
     
 }
 
 .rowArea::-webkit-scrollbar {
-    display: none;
-}
+    width: 0;
+    height: 1rem;
+  }
+
+.rowArea::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #ff8732;
+  }
+
 
 .postMovie {
     transform: scale(.8);
@@ -52,48 +59,24 @@
     transition: all ease 3ms;
 }
  
-.arrowRight,
-.arrowLeft {
+.backRight,
+.backLeft {
     display: flex;
     align-items: center;
-    width: 3vw;
+    width: 11vw;
     height: 35vh;    
 }
 
-.arrowLeft {
+.backLeft {
     margin-right: -4rem;
-    justify-content: center;
     background: linear-gradient(to right, #141414 15%, transparent 100%);
     border-radius: .25rem 4rem 4rem .25rem;
-    cursor: pointer;
     z-index: 11;
 }
 
-.arrowRight {
+.backRight {
     margin-left: -4.5rem;
-    justify-content: center;
     background: linear-gradient(to left, #141414 15%, transparent 100%);
     border-radius: 4rem .25rem .25rem 4rem;
-    cursor: pointer;
     z-index: 10;
-}
-
-.arrowLeft > svg {
-    font-size: 10rem;
-    background: linear-gradient(to left, #678 2%, transparent 82%);
-    border-radius: 0 5rem 5rem 0;
-    z-index: 20;
-    opacity: 0;
-}
-
-.arrowRight > svg {
-    font-size: 10rem;
-    background: linear-gradient(to right, #678 2%, transparent 82%);
-    border-radius: 5rem 0 0 5rem;
-    z-index: 10;
-    opacity: 0;
-} 
-
-.listRow:hover svg{
-    opacity: 1;
 }

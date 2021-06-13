@@ -5,7 +5,7 @@ import api from '../../services/api'
 import Key from '../../key.js'
 
 import Header from '../../components/header/Header'
-import ListSearchs from '../../components/lisrSearchs/listSearchs'
+import ListSearchs from '../../components/listSearchs/listSearchs'
 import Footer from '../../components/footer/footer'
 
 import './search.css'
