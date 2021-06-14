@@ -11,6 +11,7 @@ import './Header.css'
 
 const Header = () => {
     const [genreList, setGenreList] = useState([])
+    const [showMenu, setShowMenu] = useState(false)
 
     useEffect(() => {
         async function listGender() {
@@ -31,6 +32,15 @@ const Header = () => {
                     <span>Movies Search</span>
                 </div>
             </Link>
+
+            {showMenu &&
+                <div class="menuToggle">
+                    <div class="one"></div>
+                    <div class="two"></div>
+                    <div class="three"></div>
+                </div>
+            }
+
             <nav>
                 <ul>
                     <li>

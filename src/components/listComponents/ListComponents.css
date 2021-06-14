@@ -80,3 +80,79 @@
     border-radius: 4rem .25rem .25rem 4rem;
     z-index: 10;
 }
+
+@media (max-width: 1366px) {
+    .rowArea {
+        height: 32vw;
+    }
+
+    .postMovie {
+        height: 50vh;
+    }
+
+    .backLeft,
+    .backRight {
+        width: 14vw;
+        height: 54vh;
+    }
+
+    .backLeft {
+        margin-left: 0rem;
+    }
+
+    .backRight {
+        margin-left: -5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .rowArea {
+        height: 38vh;
+    }
+
+    .backLeft,
+    .backRight {
+        width: 16vw;
+        height: 36vh;
+    }
+
+    .backLeft {
+        margin-left: 2rem;
+    }    
+
+    .postMovie {
+        height: 34vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .rowArea {
+        height: 34vh;
+    }
+
+    .postMovie {
+        height: 30vh;
+    }
+    
+    .backLeft,
+    .backRight {
+        width: 26vw;
+        height: 32vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .rowArea {
+        height: 36vh;
+    }
+
+    .rowArea::-webkit-scrollbar {
+        width: 0;
+        height: 3rem;
+    }
+
+    .backLeft,
+    .backRight {
+        width: 55vw;
+    }
+}

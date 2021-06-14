@@ -50,3 +50,27 @@
 .filled {
     border: solid .2rem #2cff72;
 }
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 40%;
+    }
+
+    #search {
+        width: 40%;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    #search {
+        width: 65%;
+    }
+}

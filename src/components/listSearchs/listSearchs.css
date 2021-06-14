@@ -1,5 +1,5 @@
 .listSearch {
-    width: 90%;
+    width: 100%;
     max-width: 980px;
     margin: auto;
 
@@ -7,6 +7,8 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 20px;
     
+    align-items: flex-end;
+
     text-decoration: none;
 }
 
@@ -31,7 +33,7 @@
 }
 
 .image {
-    width: 100%;
+    /* width: 100%; */
 
     border: solid;
 
@@ -53,4 +55,23 @@
     font-weight: 500;
 
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    /* .listFind {
+        width: 80%;
+        height: 80%;
+    } */
+
+    .image > img {
+        width: 100%;
+    }
+
+    .titleListSearch {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    
 }

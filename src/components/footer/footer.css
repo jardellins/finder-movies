@@ -10,3 +10,9 @@
     background-color: rgb(255 255 255 / 14%);
     border-radius: 20rem 20rem 0 0;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        height: 7vh;
+    }
+}

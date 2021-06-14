@@ -100,3 +100,102 @@ header li:hover {
 .dropdown:hover .dropdownContent {
     display: block;
 }
+
+@media (max-width: 540px) {
+    .menuToggle nav {
+        display: none;
+    }
+
+    .one,
+    .two,
+    .three {
+        background-color: #fff;
+        height: 5px;
+        width: 100%;
+        margin: 6px auto;
+
+        transition-duration: 0.3s;
+    }
+
+    .menuToggle {
+        width: 40px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    /* fullscreen */
+
+    .active {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: #ff8732;
+
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 12;
+    }
+    .menuToggle {
+        z-index: 12;
+    }
+
+    .active > .menuToggle > nav {
+        z-index: 12;
+
+        display: block;
+    }
+    /* .menuSection.on {
+        position: absolute;
+        top:0;
+        left:0;
+        
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #7159c1;
+        
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuSection.on nav {
+        display: block;
+    }
+
+    .menuSection.on .menuToggle {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+    }
+
+    .menuSection.on .menuToggle .one {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+
+    .menuSection.on .menuToggle .two {
+        opacity: 0;
+    }
+
+    .menuSection.on .menuToggle .three {
+        transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .menuSection.on nav ul {
+        text-align: center;
+        display: block;
+    }
+
+    .menuSection.on nav ul a{
+        transition-duration: 0.5s;
+        font-size: 3rem;
+        line-height: 4rem;
+        display: block;
+        
+    } */
+
+}
