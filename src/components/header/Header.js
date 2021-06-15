@@ -33,41 +33,41 @@ const Header = () => {
                 </div>
             </Link>
 
-            {showMenu &&
-                <div class="menuToggle">
+            <div className={showMenu ? 'containerToggle active' : 'containerToogle'}>
+                <div onClick={() => setShowMenu(prevState => !prevState)} class="menuToggle">
                     <div class="one"></div>
                     <div class="two"></div>
                     <div class="three"></div>
                 </div>
-            }
 
-            <nav>
-                <ul>
-                    <li>
-                        <Link to='/' >Home</Link>
-                    </li>
-                    <li>
-                        <div className='dropdown'>
-                            <button className='dropButton'>Gênero <ArrowDropDownIcon /></button>
-                            {genreList[0] && genreList.map(list => {
-                                return (
-                                    <div key={list.id} className='dropdownContent'>
-                                        <Link to={`/genres?id=${list.id}&genre=${list.name}`} >
-                                            {list.name}
-                                        </Link>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </li>
-                    <li>
-                        <Link to='/movie' >Filmes</Link>
-                    </li>
-                    <li>
-                        <Link to='/tv' >Séries</Link>
-                    </li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to='/' >Home</Link>
+                        </li>
+                        <li>
+                            <div className='dropdown'>
+                                <button className='dropButton'>Gênero <ArrowDropDownIcon /></button>
+                                {genreList[0] && genreList.map(list => {
+                                    return (
+                                        <div key={list.id} className='dropdownContent'>
+                                            <Link to={`/genres?id=${list.id}&genre=${list.name}`} >
+                                                {list.name}
+                                            </Link>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </li>
+                        <li>
+                            <Link to='/movie' >Filmes</Link>
+                        </li>
+                        <li>
+                            <Link to='/tv' >Séries</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     )
 }

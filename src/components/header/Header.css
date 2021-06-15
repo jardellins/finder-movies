@@ -101,8 +101,31 @@ header li:hover {
     display: block;
 }
 
-@media (max-width: 540px) {
-    .menuToggle nav {
+@media (max-width: 768px) {
+    header {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 648px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+
+    .logo > img {
+        width: 6vw;
+    }
+
+    .logo > span {
+        width: 10vw;
+    }
+
+     nav {
         display: none;
     }
 
@@ -119,83 +142,72 @@ header li:hover {
 
     .menuToggle {
         width: 40px;
-        height: 30px;
-        margin-right: 20px;
+        height: 66px;
+        margin-right: 12px;
     }
 
     /* fullscreen */
 
-    .active {
+    .containerToggle.active {
         position: absolute;
         top: 0;
         left: 0;
 
         background-color: #ff8732;
 
-        width: 100vw;
+        width: 100%;
         height: 100vh;
 
         z-index: 12;
-    }
-    .menuToggle {
-        z-index: 12;
-    }
-
-    .active > .menuToggle > nav {
-        z-index: 12;
-
-        display: block;
-    }
-    /* .menuSection.on {
-        position: absolute;
-        top:0;
-        left:0;
-        
-        width: 100vw;
-        height: 100vh;
-
-        background-color: #7159c1;
-        
-        z-index: 10;
 
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 
-    .menuSection.on nav {
+    .containerToggle.active > nav {
         display: block;
     }
 
-    .menuSection.on .menuToggle {
+
+    .containerToggle.active .menuToggle {
         position: absolute;
-        right: 25px;
+        right: 0;
         top: 15px;
     }
 
-    .menuSection.on .menuToggle .one {
+    .containerToggle.active .menuToggle .one {
         transform: rotate(45deg) translate(7px, 7px);
     }
 
-    .menuSection.on .menuToggle .two {
+    .containerToggle.active .menuToggle .two {
         opacity: 0;
     }
 
-    .menuSection.on .menuToggle .three {
-        transform: rotate(-45deg) translate(8px, -9px);
+    .containerToggle.active .menuToggle .three {
+        transform: rotate(-45deg) translate(8px, -8px);
     }
 
-    .menuSection.on nav ul {
-        text-align: center;
+    .containerToggle.active > nav > ul {
+        display: block;
+        justify-content: center;
+    }
+
+    .containerToggle.active nav ul a {
+        transition-duration: 5ms;
+        font-size: 5rem;
+        line-height: 12rem;
         display: block;
     }
 
-    .menuSection.on nav ul a{
-        transition-duration: 0.5s;
-        font-size: 3rem;
-        line-height: 4rem;
-        display: block;
-        
-    } */
+    .containerToggle.active .dropdown {
+        height: 8rem;
+    }
 
+    .containerToggle.active .dropButton {
+        margin-top: 0;
+        font-size: 4.7rem;
+    }
+ 
 }

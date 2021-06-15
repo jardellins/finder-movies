@@ -5,6 +5,7 @@ import NumberFormat from 'react-number-format';
 import api from '../../services/api'
 import Key from '../../key'
 import Header from '../../components/header/Header'
+import ImgBack from '../../assets/imgBack.png'
 import Loading from '../../components/loading/Loading'
 
 import './info.css'
@@ -91,7 +92,11 @@ const Infor = () => {
                 {getInfo.id ?
                     <>
                         <div className='imageBack' />
-                        <img src={`https://image.tmdb.org/t/p/original${getInfo.backdrop_path}`} alt={getInfo.title} onLoad={() => setLoaded(true)} />
+                        {getInfo.backdrop_path ?
+                            <img src={`https://image.tmdb.org/t/p/original${getInfo.backdrop_path}`} alt={getInfo.title} onLoad={() => setLoaded(true)} />
+                            :
+                            <img src={ImgBack} alt='Imagem padrão' />
+                        }
                         <div className='container'>
                             {loaded === false ? null :
                                 <div className='mediaPoster'>

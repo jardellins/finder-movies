@@ -72,6 +72,12 @@
     }
 }
 
+@media (max-width: 648px) {
+    .titleListSearch {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 425px) {
     
 }

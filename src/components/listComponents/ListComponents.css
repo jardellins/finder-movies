@@ -127,7 +127,7 @@
 
 @media (max-width: 768px) {
     .rowArea {
-        height: 34vh;
+        height: 33vh;
     }
 
     .postMovie {
@@ -141,9 +141,26 @@
     }
 }
 
+@media (max-width: 648px) {
+    .rowArea {
+        height: 26vh;
+    }
+
+    .postMovie {
+        height: 23vh;
+    }
+
+    .backLeft,
+    .backRight {
+        width: 31vw;
+        height: 25vh;
+    }
+
+}
+
 @media (max-width: 425px) {
     .rowArea {
-        height: 36vh;
+        height: 22vh;
     }
 
     .rowArea::-webkit-scrollbar {
@@ -151,8 +168,21 @@
         height: 3rem;
     }
 
+    .postMovie {
+        height: 16vh;
+    }
+
     .backLeft,
     .backRight {
-        width: 55vw;
+        width: 56vw;
+        height: 50vw;
+    }
+
+    #poster {
+        width: 50vw;
+    }
+
+    #logo {
+        width: 7vw;
     }
 }

@@ -146,3 +146,132 @@
         font-size: 2.5rem;
     }
 }
+
+@media (max-width: 768px) {
+    #poster {
+        width: 25vw;
+    }
+
+    #playTrailer, #play {
+        width: 12vh;
+        height: 6vh;
+    }
+}
+
+@media (max-width: 648px) {
+    .mediaPoster {
+        display: block;
+    }
+
+    .imagesInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #poster {
+        width: 35vw;
+    }
+
+    .overview {
+        align-items: center;
+
+        margin-top: 3rem;
+    }
+
+    .overview > h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .overview > h2 {
+        font-size: 2.5rem;
+    }
+
+    .containerDetails {
+        display: block;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .details span {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+    }
+
+    #logo {
+        width: 10vw;
+    }
+
+    .watch {
+        margin-top: 2rem;
+    }
+
+    #playTrailer, #play {
+        width: 17vh;
+        height: 7vh;
+    }
+}
+
+@media (max-width: 425px) {
+    .mediaPoster {
+        display: block;
+    }
+
+    .imagesInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #poster {
+        width: 55vw;
+    }
+
+    .overview {
+        align-items: center;
+
+        margin-top: 3rem;
+    }
+
+    .overview > h1 {
+        font-size: 4rem;
+    }
+
+    .containerDetails {
+        display: block;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .details span {
+        display: flex;
+        justify-content: center;
+    }
+
+    .watch {
+        margin-top: 2rem;
+    }
+
+    #playTrailer, #play {
+        width: 10vh;
+        height: 5vh;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .overview > h1 {
+        text-align: center;
+    }
+
+    #playTrailer, #play {
+        width: 15vh;
+    }
+}
