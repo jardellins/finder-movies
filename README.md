@@ -37,17 +37,14 @@ Página inicial com as novidades de filmes e séries
 
 ![Capturar_select-area_20210615222113](https://user-images.githubusercontent.com/44972197/122143560-14541300-ce28-11eb-84c7-c91935669082.png)
 
+<br/>
+
 <p align="center" >
 
 ![Capturar_select-area_20210615222808](https://user-images.githubusercontent.com/44972197/122144108-2d10f880-ce29-11eb-8a0e-75a648917202.png)
 
 <p>
 
-Interações das páginas
-
-![Gravar_select-area_20210615200758](https://user-images.githubusercontent.com/44972197/122143638-32ba0e80-ce28-11eb-8199-cbc66acf328c.gif)
-
-![Gravar_select-area_20210615213919](https://user-images.githubusercontent.com/44972197/122143672-46fe0b80-ce28-11eb-9fca-e67114140275.gif)
 
 <br/>
 <a id="iniciando"></a>
