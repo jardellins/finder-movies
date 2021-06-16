@@ -33,7 +33,13 @@ Esse projeto foi desenvolvido com a seguinte Stack
 
 ## Overview da Aplicação
 
+Página inicial com as novidades de filmes e séries
+
 ![Capturar_select-area_20210615222113](https://user-images.githubusercontent.com/44972197/122143560-14541300-ce28-11eb-84c7-c91935669082.png)
+
+![Capturar_select-area_20210615222808](https://user-images.githubusercontent.com/44972197/122144108-2d10f880-ce29-11eb-8a0e-75a648917202.png)
+
+Interações das páginas
 
 ![Gravar_select-area_20210615200758](https://user-images.githubusercontent.com/44972197/122143638-32ba0e80-ce28-11eb-8199-cbc66acf328c.gif)
 
