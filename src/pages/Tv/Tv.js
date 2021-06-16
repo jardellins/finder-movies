@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
 import Key from '../../key.js'
 
-import Footer from '../../components/footer/footer'
-import Header from '../../components/header/Header'
-import ListSearchs from '../../components/listSearchs/listSearchs'
+import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'
+import ListSearchs from '../../components/ListSearchs/ListSearchs'
 
 import './Style.css'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import loading from '../../assets/loading.gif'
-import './Loading.css'
+import './Style.css'
 
 const Loading = () => (
     <div className="loading">

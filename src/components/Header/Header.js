@@ -7,7 +7,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import api from '../../services/api'
 import Key from '../../key.js'
 
-import './Header.css'
+import './Style.css'
 
 const Header = () => {
     const [genreList, setGenreList] = useState([])

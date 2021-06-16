@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import ImgDefault from '../../assets/img.png'
-import Loading from '../loading/Loading'
+import Loading from '../Loading/Loading'
 
-import './listSearchs.css'
+import './Style.css'
 
 const ListSearchs = ({ searchList, name, genre }) => {
 

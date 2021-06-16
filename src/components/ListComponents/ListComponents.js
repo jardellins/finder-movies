@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import './ListComponents.css'
+import './Style.css'
 
 const Tranding = ({ listAll, onMouseOver = () => { }, onMouseOut = () => { }, mouseOver, media_type }) => {
     

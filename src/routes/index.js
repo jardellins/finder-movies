@@ -1,12 +1,12 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Main from '../pages/main/main'
-import Search from '../pages/search/search'
+import Main from '../pages/Main/Main'
+import Search from '../pages/Search/Search'
 import Movie from '../pages/Movie/Movie'
 import Tv from '../pages/Tv/Tv'
-import Genre from '../pages/genre/genre'
-import Info from '../pages/info/info'
+import Genre from '../pages/Genre/Genre'
+import Info from '../pages/Info/Info'
 import NotFound from '../pages/NotFound'
 
 const Routes = () => {

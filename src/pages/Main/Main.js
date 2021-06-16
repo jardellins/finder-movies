@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 import api from '../../services/api'
 import Key from '../../key.js'
 
-import Header from '../../components/header/Header'
+import Header from '../../components/Header/Header'
 import Slides from '../../components/Slides/Slides'
-import ListComponents from '../../components/listComponents/ListComponents'
+import ListComponents from '../../components/ListComponents/ListComponents'
 
-import './main.css'
-import Loading from '../../components/loading/Loading'
-import Footer from '../../components/footer/footer'
+import './Style.css'
+import Loading from '../../components/Loading/Loading'
+import Footer from '../../components/Footer/Footer'
 
 const Main = () => {
     const [listAll, setListAll] = useState(null)

@@ -4,12 +4,12 @@ import NumberFormat from 'react-number-format';
 
 import api from '../../services/api'
 import Key from '../../key'
-import Header from '../../components/header/Header'
+import Header from '../../components/Header/Header'
 import ImgBack from '../../assets/imgBack.png'
-import Loading from '../../components/loading/Loading'
+import Loading from '../../components/Loading/Loading'
 
-import './info.css'
-import Footer from '../../components/footer/footer'
+import './Style.css'
+import Footer from '../../components/Footer/Footer'
 import Modal from '../../components/Modal/Modal'
 
 const Infor = () => {

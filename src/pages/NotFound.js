@@ -1,8 +1,8 @@
 import React from 'react'
 
 import notFound from '../assets/404.gif'
-import Header from '../components/header/Header'
-import './notFound.css'
+import Header from '../components/Header/Header'
+import './Style.css'
 
 const NotFound = () => {
     return (

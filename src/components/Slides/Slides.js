@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import './Slides.css'
+import './Style.css'
 
 const Slide = (slide) => {
 
