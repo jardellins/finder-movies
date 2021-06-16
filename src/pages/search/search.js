@@ -24,7 +24,7 @@ const Search = () => {
     useEffect(() => {
 
         const findout = async () => {
-            await api.get(`/search/multi${Key}&query=${query.get("name")}`).then(response => {
+            await api.get(`/search/multi${Key}&query=${name}`).then(response => {
                 setSearchList(response.data.results)
             })
         }

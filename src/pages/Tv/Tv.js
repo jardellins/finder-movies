@@ -24,19 +24,18 @@ const Movie = () => {
     }, [])
 
     useEffect(() => {
+        const addMedia = () => {
+            const newData = listOfMovies.map(list => ({
+                ...list,
+                media_type: 'tv'
+            }))
+    
+            setNewList(newData)
+        }
         
         addMedia()
 
     }, [listOfMovies])
-
-    const addMedia = () => {
-        const newData = listOfMovies.map(list => ({
-            ...list,
-            media_type: 'tv'
-        }))
-
-        setNewList(newData)
-    }
 
     return (
         <>

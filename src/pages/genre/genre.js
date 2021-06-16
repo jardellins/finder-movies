@@ -31,19 +31,17 @@ const Genre = () => {
 
         findout()
         
-        
     }, [genre])
-
-    const addMedia = () => {
-        const newSearch = searchList && searchList.map(list => ({
-            ...list,
-            media_type: 'movie'
-        }))
-
-        setNewSearchList(newSearch)
-    }
     
     useEffect(() => {
+        const addMedia = () => {
+            const newSearch = searchList && searchList.map(list => ({
+                ...list,
+                media_type: 'movie'
+            }))
+    
+            setNewSearchList(newSearch)
+        }
         
         addMedia()
 

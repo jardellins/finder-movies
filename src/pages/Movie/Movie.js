@@ -13,15 +13,6 @@ const Movie = () => {
     const [listOfMovies, setListOfMovies] = useState([])
     const [newList, setNewList] = useState([])
 
-    const addMedia = () => {
-        const newData = listOfMovies.map(list => ({
-            ...list,
-            media_type: 'movie'
-        }))
-
-        setNewList(newData)
-    }
-    
     useEffect(() => {
         const getMovies = async () => {
             await api.get(`/discover/movie${Key}`).then(responde => {
@@ -33,6 +24,14 @@ const Movie = () => {
     }, [])
 
     useEffect(() => {
+        const addMedia = () => {
+            const newData = listOfMovies.map(list => ({
+                ...list,
+                media_type: 'movie'
+            }))
+    
+            setNewList(newData)
+        }
         
         addMedia()
 

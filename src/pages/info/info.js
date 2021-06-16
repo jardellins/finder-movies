@@ -52,32 +52,31 @@ const Infor = () => {
         }
     }, [getTrailer])
 
-    const handleMinute = () => {
-        if (!getInfo.runtime === false) {
-            setMinutes(getInfo.runtime)
-        } else {
-            if (!getInfo.episode_run_time === false) {
-                setMinutes(getInfo.episode_run_time[0])
-            }
-        }
-    }
-
-
-    const handleDate = () => {
-        if (getInfo.release_date) {
-            const dateArray = getInfo.release_date.split('-')
-
-            setDateNew(`${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`)
-        } else {
-            if (getInfo.first_air_date) {
-                const dateArray = getInfo.first_air_date.split('-')
-
-                setDateNew(`${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`)
-            }
-        }
-    }
-
     useEffect(() => {
+        const handleMinute = () => {
+            if (!getInfo.runtime === false) {
+                setMinutes(getInfo.runtime)
+            } else {
+                if (!getInfo.episode_run_time === false) {
+                    setMinutes(getInfo.episode_run_time[0])
+                }
+            }
+        }
+
+        const handleDate = () => {
+            if (getInfo.release_date) {
+                const dateArray = getInfo.release_date.split('-')
+    
+                setDateNew(`${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`)
+            } else {
+                if (getInfo.first_air_date) {
+                    const dateArray = getInfo.first_air_date.split('-')
+    
+                    setDateNew(`${dateArray[2]}/${dateArray[1]}/${dateArray[0]}`)
+                }
+            }
+        }
+
         handleMinute()
         handleDate()
     }, [getInfo])
@@ -182,7 +181,7 @@ const Infor = () => {
                                         </>
                                     }
                                     {getInfo.homepage &&
-                                        <a href={getInfo.homepage} target='_blank'>
+                                        <a href={getInfo.homepage} rel="noreferrer" target='_blank'>
                                             <button id='play'>Assita</button>
                                         </a>
                                     }

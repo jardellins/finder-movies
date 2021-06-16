@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+<h1 align="center">
+    Movies search
+</h1>
+<p align="center">Uma interface onde podemos encontrar algumas informações de filmes/séries, além de assistir o trailer ou ser redirecionado para o site oficial</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+ <a href="#sobre">Sobre</a> 
+ <a href="#tecnologias">Tecnologias</a>
+ <a href="#overview">Overview</a>
+ <a href="#iniciando">Iniciando a aplicação</a>
+</p>
 
-## Available Scripts
+<br/>
+<a id="sobre"></a>
 
-In the project directory, you can run:
+## :scroll: Sobre
 
-### `yarn start`
+O projeto tem como objetivo apresentar ao usuário as novidades entre filmes e séries, além de encontrar aquele seu filme favorito. Ao selecionar o filme ou série, temos uma página mostrando algumas informações sobre a produção, como também podemos assistir o trailer oficial ou ser redirecionado para a página oficial da produção. Todas as informações foram extraidas da API do [TMDB](https://www.themoviedb.org/), e o design fui desenvolvendo conforme o meu agrado. A aplicação foi construida utilizando ReactJS, e utilizando componentes e os Hooks para um melhor aproveitamento. Realizado a construção de modal para a abertura do trailer, além de adicionar uma responsividade para telas menores.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>
+<a id="tecnologias"></a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :wrench: Tecnologias
 
-### `yarn test`
+Esse projeto foi desenvolvido com a seguinte Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ReactJS](https://reactjs.org/)
+- [ReactPlayer](https://www.npmjs.com/package/react-player)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
-### `yarn build`
+<br/>
+<a id="overview"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Overview da Aplicação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Capturar_select-area_20210615222113](https://user-images.githubusercontent.com/44972197/122143560-14541300-ce28-11eb-84c7-c91935669082.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Gravar_select-area_20210615200758](https://user-images.githubusercontent.com/44972197/122143638-32ba0e80-ce28-11eb-8199-cbc66acf328c.gif)
 
-### `yarn eject`
+![Gravar_select-area_20210615213919](https://user-images.githubusercontent.com/44972197/122143672-46fe0b80-ce28-11eb-9fca-e67114140275.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br/>
+<a id="iniciando"></a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Iniciando a aplicação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Para utilizar os dados da API do [TMDB](https://www.themoviedb.org/) será necessário criar uma conta no site https://www.themoviedb.org/documentation/api e criar um projeto para que seja disponibilado um TOKEN.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Download do Projeto
 
-## Learn More
+```sh
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+git clone https://github.com/jardellins/finder-movies.git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+## Iniciar o Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Entrar no diretório da plaicação
 
-### Analyzing the Bundle Size
+```sh
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+cd finder-movies
 
-### Making a Progressive Web App
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+E em seguida rodar os comandos
 
-### Advanced Configuration
+```sh
+yarn install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+yarn start
+```
