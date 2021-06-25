@@ -81,7 +81,7 @@ const Infor = () => {
         handleDate()
     }, [getInfo])
 
-    console.log(getInfo)
+    // console.log(getInfo)
     // console.log(urlTrailer)
 
     return (
