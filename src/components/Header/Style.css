@@ -42,11 +42,12 @@ header li {
     width: 10rem;
 
     margin: 0 2rem;
-
+    padding: 3rem;
 }
 
 header li:hover {
     border-bottom: solid;
+
     cursor: pointer;
 }
 
@@ -67,7 +68,7 @@ header li:hover {
 
 .dropButton > svg {
     font-size: 5rem;
-    margin-top: -1rem;
+    margin-top: -2rem;
 }
 
 .dropdown {

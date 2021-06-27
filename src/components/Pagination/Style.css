@@ -1,0 +1,44 @@
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.buttonPage {
+    border: solid #ff8732 3px;
+    border-radius: .8rem;
+    background: #fff;
+    height: 5rem;
+    width: 5rem;
+    margin: 1.5rem;
+    font-size: 2rem;
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+.buttonPage:hover {
+    background: #ffd8bb;
+}
+
+.buttonPage.active {
+    background: #ff8732;
+    color: #fff;
+}
+
+.buttonHandle {
+    border: solid #ff8732 3px;
+    border-radius: .8rem;
+    background: #fff;
+    height: 5rem;
+    width: 10rem;
+    margin: 1.5rem;
+    margin: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+.buttonHandle:hover {
+    background: #ffd8bb;
+}

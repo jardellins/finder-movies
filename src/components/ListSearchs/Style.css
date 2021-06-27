@@ -1,6 +1,6 @@
 .listSearch {
     width: 100%;
-    max-width: 980px;
+
     margin: auto;
 
     display: grid;
@@ -55,6 +55,13 @@
     font-weight: 500;
 
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1340px) {
+    .image > img {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 1024px) {
